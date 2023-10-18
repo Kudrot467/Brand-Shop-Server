@@ -1,0 +1,32 @@
+[
+  {
+  "id": 1,
+  "bname": "Apple",
+  "bpic": "https://ibb.co/S3ZnYcL"
+},
+{
+  "id": 2,
+  "bname": "Samsung",
+  "bpic": "https://ibb.co/tH1KfsQ"
+},
+{
+  "id": 3,
+  "bname": "Xiaomi",
+  "bpic": "https://ibb.co/tQmXnRK"
+},
+{
+  "id": 4,
+  "bname": "Sony",
+  "bpic": "https://ibb.co/y575fw8"
+},
+{
+  "id": 5,
+  "bname": "Google",
+  "bpic": "https://ibb.co/6HS78Gc"
+},
+{
+  "id": 6,
+  "bname": "LG",
+  "bpic": "https://ibb.co/8zh7Xtg"
+}
+]

@@ -62,43 +62,43 @@ async function run() {
         res.send(result);
     });
 
-    // app.get("/products/:id", async (req, res) => {
-    //     const id = req.params.id
-    //     const query = {_id : new ObjectId(id)}
+    app.get("/products/:id", async (req, res) => {
+        const id = req.params.id
+        const query = {_id : new ObjectId(id)}
         
-    //     const result = await productCollection.findOne(query)
-    //     console.log(result);
-    //     res.send(result)
+        const result = await productCollection.findOne(query)
+        console.log(result);
+        res.send(result)
         
-    // })
+    })
 
 
-    // app.put('/products/:id', async (req, res) => {
-    //     const id = req.params.id
-    //     const filter = {
-    //         _id: new ObjectId(id)
-    //     }
-    //     const newProduct = req.body
-    //     const options = {
-    //         upsert: true,
-    //     }
-    //     const updatedProduct = {
-    //         $set: {
-    //             image_url: newProduct.image_url,
-    //             name: newProduct.name,
-    //             brand_name: newProduct.brand_name,
-    //             type: newProduct.type,
-    //             details : newProduct.details,
-    //             price: newProduct.price,
-    //             short_description: newProduct.short_description,
-    //             rating: newProduct.rating
+    app.put('/products/:id', async (req, res) => {
+        const id = req.params.id
+        const filter = {
+            _id: new ObjectId(id)
+        }
+        const newProduct = req.body
+        const options = {
+            upsert: true,
+        }
+        const updatedProduct = {
+            $set: {
+                image_url: newProduct.image_url,
+                name: newProduct.name,
+                brand_name: newProduct.brand_name,
+                type: newProduct.type,
+                details : newProduct.details,
+                price: newProduct.price,
+                short_description: newProduct.short_description,
+                rating: newProduct.rating
 
-    //         }
-    //     }
-    //     const result = await productCollection.updateOne(filter , updatedProduct , options)
-    //     console.log(result);
-    //     res.send(result);
-    // })
+            }
+        }
+        const result = await productCollection.updateOne(filter , updatedProduct , options)
+        console.log(result);
+        res.send(result);
+    })
 
    app.post('/products', async (req, res) => {
      const product = req.body;
